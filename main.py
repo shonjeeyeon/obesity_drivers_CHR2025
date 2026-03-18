@@ -3,6 +3,7 @@ import json
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from xgboost import XGBRegressor
 
 from src.data_cleaning import (
     DATA_PATH,
@@ -31,13 +32,29 @@ def main() -> None:
     X_train, X_test, y_train, y_test = split_data(X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE)
     elasticnet, random_forest = train_models(X_train, y_train)
 
+    # --- XGBoost model ---
+    xgb = XGBRegressor(
+        n_estimators=100,
+        max_depth=4,
+        learning_rate=0.1,
+        subsample=0.8,
+        colsample_bytree=0.8,
+        random_state=RANDOM_STATE,
+        n_jobs=-1
+    )
+    xgb.fit(X_train.fillna(X_train.median()), y_train)
+
+    # Predictions
     en_pred = elasticnet.predict(X_test)
     rf_pred = random_forest.predict(X_test)
+    xgb_pred = xgb.predict(X_test.fillna(X_test.median()))
 
+    # Metrics
     metrics = pd.DataFrame(
         [
             {"model": "ElasticNet", **regression_metrics(y_test, en_pred)},
             {"model": "RandomForest", **regression_metrics(y_test, rf_pred)},
+            {"model": "XGBoost", **regression_metrics(y_test, xgb_pred)},
         ]
     )
 
@@ -49,14 +66,14 @@ def main() -> None:
     coef_df = coefficient_table(elasticnet, feature_cols)
     shap_df = shap_table_and_plots(random_forest, X_test, feature_cols, OUTPUT_DIR)
 
+    # Coefficient plot
     top_coef = coef_df.head(15).sort_values("coefficient")
     plt.figure(figsize=(8, 6))
     plt.barh(top_coef["feature"], top_coef["coefficient"])
     plt.xlabel("Standardized coefficient")
-    plt.ylabel("")
     plt.title("Top 15 ElasticNet coefficients")
     plt.tight_layout()
-    plt.savefig(OUTPUT_DIR / "elasticnet_top15_coefficients.png", dpi=200, bbox_inches="tight")
+    plt.savefig(OUTPUT_DIR / "elasticnet_top15_coefficients.png", dpi=200)
     plt.close()
 
     save_clean_data(raw_df.loc[X.index], id_cols, X, y, OUTPUT_DIR)
@@ -71,14 +88,16 @@ def main() -> None:
         "n_features": int(len(feature_cols)),
         "top_shap_feature": str(shap_df.iloc[0]["feature"]),
         "top_coefficient_feature": str(coef_df.iloc[0]["feature"]),
+        "best_model": metrics.sort_values("r2", ascending=False).iloc[0]["model"],
     }
     with open(OUTPUT_DIR / "run_summary.json", "w") as f:
         json.dump(summary, f, indent=2)
 
     print("Pipeline complete.")
     print(metrics.to_string(index=False))
-    print("Top SHAP feature:", shap_df.iloc[0]["feature"])
+    print("Best model:", summary["best_model"])
 
 
 if __name__ == "__main__":
     main()
+
