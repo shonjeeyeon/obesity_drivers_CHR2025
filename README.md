@@ -49,9 +49,6 @@ Using both **interpretable regression models** and **SHAP-based explainability**
    * Captures nonlinear relationships
    * Used for feature importance via SHAP
 
-### Additional Model: XGBoost
-XGBoost was included as a performance benchmark. ElasticNet still slightly outperformed XGBoost, and the key drivers identified by SHAP remained consistent, reinforcing the robustness of the findings.
-
 ---
 
 ### Explainability
@@ -67,11 +64,16 @@ XGBoost was included as a performance benchmark. ElasticNet still slightly outpe
 
 | Model         | R²    | RMSE   | MAE    |
 | ------------- | ----- | ------ | ------ |
-| ElasticNet    | ~0.81 | ~0.020 | ~0.016 |
+| **ElasticNet**| **~0.81** | **~0.020** | **~0.016** |
 | XGBoost       | ~0.80 | ~0.021 | ~0.016 |
 | Random Forest | ~0.78 | ~0.022 | ~0.017 |
 
 *(Obesity is measured as a proportion, so RMSE ≈ 2 percentage points)*
+
+
+### Additional Model: XGBoost
+XGBoost was included as a performance benchmark. ElasticNet still slightly outperformed XGBoost, and the key drivers identified by SHAP remained consistent, reinforcing the robustness of the findings.
+
 
 ---
 
