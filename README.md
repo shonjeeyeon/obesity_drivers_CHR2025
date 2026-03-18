@@ -90,7 +90,7 @@ XGBoost was included as a performance benchmark. ElasticNet still slightly outpe
 9. Uninsured Adults
 10. % Asian
 
-📊 See visualization:
+### Visualizations
 ![Top Drivers](outputs/shap_summary.png)
 * Each point represents a county.
 * Color = feature value (red = high, blue = low)
