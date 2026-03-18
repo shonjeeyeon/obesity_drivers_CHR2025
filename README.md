@@ -89,7 +89,12 @@ XGBoost was included as a performance benchmark. ElasticNet still slightly outpe
 10. % Asian
 
 📊 See visualization:
-`outputs/shap_summary.png`
+![Top Drivers](outputs/shap_summary.png)
+Each point represents a county.
+* Color = feature value (red = high, blue = low)
+* Position = impact on obesity prediction
+Features are ordered by overall importance.
+This plot shows that physical inactivity dominates all other predictors, with a much larger impact on obesity prevalence than any other variable.
 
 ![Top SHAP Features](outputs/shap_top15_bar.png)
 
