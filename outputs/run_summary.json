@@ -1,0 +1,8 @@
+{
+  "target": "Adult Obesity raw value",
+  "n_rows": 3089,
+  "n_features": 81,
+  "top_shap_feature": "Physical Inactivity raw value",
+  "top_coefficient_feature": "Diabetes Prevalence raw value",
+  "best_model": "ElasticNet"
+}

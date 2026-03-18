@@ -1,0 +1,82 @@
+feature,mean_abs_shap
+Physical Inactivity raw value,0.024250375690982647
+Diabetes Prevalence raw value,0.005236048075716367
+Adult Smoking raw value,0.0029908212430718607
+Severe Housing Cost Burden raw value,0.002531306086657478
+% Hispanic raw value,0.0017433399811834563
+Driving Alone to Work raw value,0.0016357442299692678
+Excessive Drinking raw value,0.001232378694648963
+% Non-Hispanic Black raw value,0.0011042149198391582
+Uninsured Adults raw value,0.0008321724279014733
+% Asian raw value,0.0007965989741727383
+% Below 18 Years of Age raw value,0.0006706172277913375
+Life Expectancy raw value,0.0006183921566042964
+Uninsured raw value,0.0006166102935208119
+Severe Housing Problems raw value,0.0006044649152019579
+Child Care Centers raw value,0.0005246413146018909
+% Not Proficient in English raw value,0.0005184968632365151
+Child Care Cost Burden raw value,0.0004497769310621094
+Mammography Screening raw value,0.00036145321320390854
+Census Participation raw value,0.000337375587894778
+School Funding Adequacy raw value,0.0003189488437765711
+Lack of Social and Emotional Support raw value,0.0003043479665593394
+Low Birth Weight raw value,0.0002874983252347614
+Alcohol-Impaired Driving Deaths raw value,0.00027971246110366566
+% Disability: Functional Limitations raw value,0.0002725344985295548
+% American Indian or Alaska Native raw value,0.00022753071373258514
+Population raw value,0.0002269999622052687
+Social Associations raw value,0.0002255709098302269
+Children Eligible for Free or Reduced Price Lunch raw value,0.00020902188651564766
+Insufficient Sleep raw value,0.00020660899174131136
+Library Access raw value,0.00020235229314841043
+Traffic Volume raw value,0.0002001819425325528
+Frequent Physical Distress raw value,0.00019802540680090278
+Feelings of Loneliness raw value,0.0001965037869036824
+Sexually Transmitted Infections raw value,0.00019506250195473767
+Suicides raw value,0.00018903407860515776
+HIV Prevalence raw value,0.00018846124463002174
+Mental Health Providers raw value,0.0001883423676132769
+Preventable Hospital Stays raw value,0.00018762153507610965
+Median Household Income raw value,0.00018666599244438826
+% Female raw value,0.00018466930650963716
+% Native Hawaiian or Other Pacific Islander raw value,0.0001832740080639782
+Uninsured Children raw value,0.00018272409729704086
+Children in Poverty raw value,0.00018033526398705075
+Income Inequality raw value,0.0001678224326815047
+% Non-Hispanic White raw value,0.00016455064939981492
+High School Completion raw value,0.00015939203115111793
+Air Pollution: Particulate Matter raw value,0.0001539182409755968
+Gender Pay Gap raw value,0.00015259778768325478
+Access to Parks raw value,0.00013625170104813932
+Premature Age-Adjusted Mortality raw value,0.00013505184105333092
+Injury Deaths raw value,0.000125003279438798
+Reading Scores raw value,0.00012126682343521106
+Primary Care Physicians raw value,0.00011440078759543
+Premature Death raw value,0.00010712703887633914
+Homeownership raw value,0.00010165802397269545
+Poor or Fair Health raw value,0.00010139388347462334
+Long Commute - Driving Alone raw value,9.892563240925965e-05
+Children in Single-Parent Households raw value,9.807084984941383e-05
+Access to Exercise Opportunities raw value,9.474217544418234e-05
+Voter Turnout raw value,9.346717268290086e-05
+High School Graduation raw value,9.131037898450802e-05
+% Rural raw value,8.996846209623433e-05
+Food Insecurity raw value,8.89124493183989e-05
+Frequent Mental Distress raw value,8.816163702309959e-05
+Poor Mental Health Days raw value,8.802095582307322e-05
+Poor Physical Health Days raw value,8.4532863004462e-05
+% 65 and Older raw value,8.400084295706649e-05
+School Segregation raw value,8.365342634928524e-05
+Limited Access to Healthy Foods raw value,7.865406195461528e-05
+Adverse Climate Events raw value,7.443522151482019e-05
+Unemployment raw value,7.166214601450725e-05
+Drinking Water Violations raw value,6.249569801453249e-05
+Broadband Access raw value,6.134364697461151e-05
+Teen Births raw value,5.9898876284000645e-05
+Some College raw value,5.820189254850305e-05
+Motor Vehicle Crash Deaths raw value,5.6374507626261e-05
+Math Scores raw value,5.5122284680178904e-05
+Other Primary Care Providers raw value,5.2828874239934084e-05
+Dentists raw value,4.870167406276339e-05
+Flu Vaccinations raw value,4.516900731547097e-05
+Food Environment Index raw value,3.921348528191955e-05
